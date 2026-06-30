@@ -4,16 +4,128 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>POP Academy</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  body { background: #FAF7F3; color: #18140F; font-family: 'DM Sans', sans-serif; max-width: 640px; margin: 0 auto; padding: 72px 24px; }
-  h1 { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 32px; }
-  a { display: block; color: #E0A0BB; text-decoration: underline; padding: 18px 0; border-top: 1px solid rgba(24,20,15,0.12); font-size: 18px; }
-  a:hover { color: #18140F; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --pink: #EFBBCF;
+    --pink-deep: #E0A0BB;
+    --pink-light: #F9EBF2;
+    --black: #18140F;
+    --off-white: #FAF7F3;
+    --warm-gray: #8A7E72;
+    --border: rgba(24,20,15,0.1);
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+  html, body { background: var(--off-white); color: var(--black); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+
+  .page { max-width: 680px; margin: 0 auto; padding: 64px 24px 96px; }
+
+  /* ── Header ── */
+  .header { margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink-deep); margin-bottom: 16px; }
+  h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(36px, 6vw, 52px); line-height: 1.08; margin-bottom: 20px; }
+  .positioning { font-size: 17px; line-height: 1.7; color: var(--warm-gray); max-width: 54ch; }
+
+  /* ── Pillars ── */
+  .pillars { display: flex; flex-direction: column; gap: 48px; }
+
+  .pillar-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--pink-deep);
+    margin-bottom: 4px;
+  }
+  .pillar-name {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .pillar-coming {
+    font-size: 15px;
+    color: var(--warm-gray);
+    font-style: italic;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── Nugget links ── */
+  .nugget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-top: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--black);
+    font-size: 17px;
+  }
+  .nugget:hover { color: var(--pink-deep); }
+  .nugget:hover .nugget-arrow { color: var(--pink-deep); }
+  .nugget-arrow { color: var(--border); font-size: 18px; transition: color 0.15s; }
+
+  /* ── Footer ── */
+  footer { margin-top: 72px; padding-top: 28px; border-top: 1px solid var(--border); font-size: 14px; color: var(--warm-gray); }
+  footer a { color: var(--pink-deep); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
-  <h1>POP Academy</h1>
-  <a href="where-product-and-growth-meet.html">Where Product and Growth Meet</a>
+<div class="page">
+
+  <div class="header">
+    <div class="eyebrow">POP Academy</div>
+    <h1>The curriculum for People professionals who want to drive real business impact.</h1>
+    <p class="positioning">Short, sharp reading guides built around the thinking and mental models that make the difference in early-to-mid career People roles — in emerging markets and beyond.</p>
+  </div>
+
+  <div class="pillars">
+
+    <div class="pillar">
+      <div class="pillar-label">Pillar 01</div>
+      <div class="pillar-name">The Commercial Ally</div>
+      <a href="where-product-and-growth-meet.html" class="nugget">
+        Where Product and Growth Meet
+        <span class="nugget-arrow">&rarr;</span>
+      </a>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-label">Pillar 02</div>
+      <div class="pillar-name">The Trusted Advisor</div>
+      <div class="pillar-coming">Coming soon</div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-label">Pillar 03</div>
+      <div class="pillar-name">The Growth Coach</div>
+      <div class="pillar-coming">Coming soon</div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-label">Pillar 04</div>
+      <div class="pillar-name">The Experience Shaper</div>
+      <div class="pillar-coming">Coming soon</div>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 56px; padding: 28px; background: var(--pink-light); border-left: 3px solid var(--pink-deep);">
+    <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink-deep); margin-bottom: 10px;">POP Lab</div>
+    <p style="font-size: 16px; line-height: 1.65; margin-bottom: 14px;">Ready to apply this thinking? POP Lab is the thinking companion that brings each of these frameworks to life — through your real situations, not hypotheticals.</p>
+    <a href="https://lab.thepopsage.com" style="font-size: 15px; font-weight: 600; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--pink-deep);">Try POP Lab &rarr;</a>
+  </div>
+
+  <footer>
+    A <a href="https://thepopsage.com">POP XP</a> product by The POP Sage
+  </footer>
+
+</div>
 </body>
 </html>
