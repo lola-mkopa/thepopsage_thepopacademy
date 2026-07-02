@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insight to Action — POP Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --pink: #EFBBCF;
+    --pink-deep: #E0A0BB;
+    --pink-light: #F9EBF2;
+    --black: #18140F;
+    --off-white: #FAF7F3;
+    --warm-gray: #8A7E72;
+    --light-gray: #E8E2DA;
+    --border: rgba(24,20,15,0.12);
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html, body {
+    background: var(--off-white);
+    color: var(--black);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+
+  /* ── Eyebrow / breadcrumb ───────────────────── */
+  .eyebrow {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 28px;
+  }
+  .eyebrow span { color: var(--pink-deep); }
+
+  /* ── Title ──────────────────────────────────── */
+  h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(34px, 6vw, 48px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-bottom: 48px;
+  }
+
+  /* ── Section labels ─────────────────────────── */
+  .label {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pink-deep);
+    margin: 44px 0 14px;
+  }
+  .label:first-of-type { margin-top: 0; }
+
+  .step-label {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--black);
+    margin: 28px 0 8px;
+  }
+
+  p { margin-bottom: 18px; max-width: 62ch; }
+  p:last-child { margin-bottom: 0; }
+
+  .mental-model {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--black);
+    max-width: 56ch;
+  }
+
+  em { font-style: italic; }
+
+  /* ── Chain — signature element ───────────────── */
+  .chain {
+    margin: 28px 0 32px;
+    padding: 24px 28px;
+    background: var(--pink-light);
+    border-left: 3px solid var(--pink-deep);
+  }
+  .chain-spine {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--black);
+  }
+  .chain-spine .arrow {
+    font-family: var(--sans);
+    font-style: normal;
+    color: var(--pink-deep);
+    margin: 0 6px;
+  }
+  .chain-cases {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .chain-case {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .chain-case .fact { font-style: italic; }
+  .chain-case .arrow { color: var(--pink-deep); margin: 0 4px; font-style: normal; }
+
+  /* ── Divider ─────────────────────────────────── */
+  .rule {
+    border: none;
+    border-top: 0.5px solid var(--border);
+    margin: 48px 0;
+  }
+
+  /* ── The Line That Matters ──────────────────── */
+  .line-block {
+    margin: 0;
+    padding: 0 0 0 24px;
+    border-left: 3px solid var(--pink-deep);
+  }
+  .line-block p {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.35;
+    color: var(--black);
+    max-width: 50ch;
+  }
+
+  /* ── Try this ────────────────────────────────── */
+  .try-this {
+    background: var(--black);
+    color: var(--off-white);
+    padding: 32px 28px;
+    margin-top: 0;
+  }
+  .try-this .label { color: var(--pink); margin-top: 0; }
+  .try-this p { color: var(--off-white); max-width: 58ch; margin-bottom: 0; }
+
+  /* ── POP Lab link-out ────────────────────────── */
+  .lab-link {
+    margin-top: 40px;
+    font-size: 15px;
+    color: var(--warm-gray);
+    font-style: italic;
+  }
+  .lab-link a {
+    color: var(--pink-deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--pink-deep);
+  }
+  .lab-link a:hover { color: var(--black); border-color: var(--black); }
+
+  @media (max-width: 480px) {
+    .page { padding: 48px 20px 72px; }
+    .mental-model { font-size: 19px; }
+    .line-block p { font-size: 21px; }
+    .chain-row { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="eyebrow">POP Academy &nbsp;·&nbsp; <span>The Commercial Ally</span> &nbsp;·&nbsp; People Roadmapping for Dummies</div>
+
+  <h1>Insight to Action</h1>
+
+  <div class="label">The situation</div>
+  <p>You've got a page of things you believe the business needs from People right now: enhance organizational capability, increase talent density, refine the employee experience. These are your People implications, what the business context means for what the People team needs to work on. Directional, but not yet a plan. You don't know how to turn that page into something a manager could actually act on.</p>
+
+  <div class="label">The mental model</div>
+  <p class="mental-model">A People roadmap is not a list of implications. It's a series of specific answers to one question, asked once for every business objective: what can the People team do to increase the odds this objective gets hit.</p>
+
+  <hr class="rule">
+
+  <div class="label">Why this matters</div>
+  <p>Most People teams get stuck at exactly this step. They either stay too strategic, circling the implications without ever turning them into anything executable, or they jump straight to operational detail and end up busy on things disconnected from what leadership actually cares about. The first version shows up as a deck full of aspirational language and no action items. The second shows up as a long list of People activities nobody can trace back to a business priority.</p>
+  <p>Both look like progress. Neither is. The fix isn't more thinking time, it's going back to the specific business objectives your implications came from, and asking the same disciplined question against each one.</p>
+
+  <div class="label">The model</div>
+  <p>If you can't name the specific business objective a roadmap item serves, it doesn't belong on the roadmap yet. And the answer to "what should we do about this" is sometimes to add something, sometimes to remove something creating friction. Both count as progress.</p>
+
+  <div class="label">The method</div>
+
+  <div class="step-label">Step 1 — Go back to the objective, not the implication</div>
+  <p>Take one of your People implications and trace it back to the specific business objective it came from. For each objective, literally answer: what can we do from a People perspective to increase the odds this gets achieved? Say the objective is expanding into new markets. A People objective could be building the team's capacity and infrastructure to support that expansion.</p>
+
+  <div class="step-label">Step 2 — Get specific about what delivers it</div>
+  <p>Brainstorm the initiatives, programs, or projects that would move that People objective. For the expansion example, that could mean upgrading your HR systems to support a distributed team, or putting someone in charge of figuring out fair, consistent pay across the different countries you're hiring in.</p>
+  <p>If you're weighing several options, weigh them on the same three things: how fast you can stand it up, what it costs, and how directly it moves the objective. A roadmap where every initiative looks equally important usually means none of them were tested against those three.</p>
+  <p>In many businesses across Lagos, Nairobi, Kampala, or Accra, the highest-impact move is often not a program at all: it's a single hire, a policy change, or freeing up a manager's time, since budget and headcount are usually the tighter constraint than ambition.</p>
+
+  <div class="step-label">Step 3 — Remember subtraction counts too</div>
+  <p>Sometimes the answer isn't a new initiative. It's removing something that's slowing the business down. Here's the same objective producing two different kinds of answer, one additive and one subtractive:</p>
+
+  <div class="chain">
+    <div class="chain-spine">Objective<span class="arrow">&rarr;</span>People objective<span class="arrow">&rarr;</span>Initiative</div>
+    <div class="chain-cases">
+      <div class="chain-case"><span class="fact">"Expand into new markets"</span><span class="arrow">&rarr;</span>build capacity for a distributed team<span class="arrow">&rarr;</span>upgrade HR systems, put someone in charge of cross-market pay.</div>
+      <div class="chain-case"><span class="fact">"Free up capacity to support growth"</span><span class="arrow">&rarr;</span>reduce approval friction<span class="arrow">&rarr;</span>eliminate the policy requiring People sign-off on every leave request.</div>
+    </div>
+  </div>
+
+  <p>You'll often need a combination of initiatives to hit one objective, not one silver bullet.</p>
+
+  <div class="step-label">Step 4 — Decide how you'll know it worked</div>
+  <p>For each initiative, name what you'll track to confirm it did what you wanted, and that it moved the business objective it's tied to. Know what you're watching before you start, not after.</p>
+
+  <hr class="rule">
+
+  <div class="label">The line that matters</div>
+  <div class="line-block">
+    <p>If you can't name the specific business objective a roadmap item serves, it doesn't belong on the roadmap yet.</p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="try-this">
+    <div class="label">Try this</div>
+    <p>Pick one thing you believe People needs to work on right now. Name the business objective it serves and the initiative that would deliver it. If you can't name both, that's the gap to close before it goes on your roadmap.</p>
+  </div>
+
+  <div class="lab-link">Bring this to life in <a href="https://lab.thepopsage.com">POP Lab — The Commercial Ally</a>.</div>
+
+</div>
+</body>
+</html>
