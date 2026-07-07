@@ -26,7 +26,7 @@
 
   /* ── Header ── */
   .header { margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
-  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink-deep); margin-bottom: 16px; }
+  .eyebrow { font-size: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink-deep); margin-bottom: 20px; }
   h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(36px, 6vw, 52px); line-height: 1.08; margin-bottom: 20px; }
   .positioning { font-size: 17px; line-height: 1.7; color: var(--warm-gray); max-width: 54ch; }
 
@@ -66,14 +66,24 @@
     color: var(--black);
     font-size: 17px;
   }
+  .nugget { align-items: flex-start; }
   .nugget:hover { color: var(--pink-deep); }
   .nugget:hover .nugget-arrow { color: var(--pink-deep); }
-  .nugget-arrow { color: var(--border); font-size: 18px; transition: color 0.15s; }
+  .nugget-arrow { color: var(--border); font-size: 18px; transition: color 0.15s; margin-top: 2px; }
+  .nugget-title { font-size: 17px; }
+  .nugget-sub { font-size: 14px; color: var(--warm-gray); margin-top: 5px; font-weight: 400; }
 
   /* ── Footer ── */
   footer { margin-top: 72px; padding-top: 28px; border-top: 1px solid var(--border); font-size: 14px; color: var(--warm-gray); }
   footer a { color: var(--pink-deep); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    .page { padding: 48px 20px 72px; }
+    h1 { font-size: 30px; }
+    .header { margin-bottom: 44px; padding-bottom: 32px; }
+    .pillars { gap: 36px; }
+  }
 </style>
 </head>
 <body>
@@ -81,8 +91,8 @@
 
   <div class="header">
     <div class="eyebrow">POP Academy</div>
-    <h1>The curriculum for People professionals who want to drive real business impact.</h1>
-    <p class="positioning">Short, sharp reading guides built around the thinking and mental models that make the difference in early-to-mid career People roles — in emerging markets and beyond.</p>
+    <h1>HR thinking, built for how business actually works when hierarchy and influence don't follow the textbook.</h1>
+    <p class="positioning">Short, sharp reading guides on the thinking that drives real commercial impact, for People professionals navigating power distance, indirect feedback, and resource constraints most HR content ignores.</p>
   </div>
 
   <div class="pillars">
@@ -91,15 +101,24 @@
       <div class="pillar-label">Pillar 01</div>
       <div class="pillar-name">The Commercial Ally</div>
       <a href="where-product-and-growth-meet.html" class="nugget">
-        Where Product and Growth Meet
+        <div>
+          <div class="nugget-title">Where Product and Growth Meet</div>
+          <div class="nugget-sub">Why a People strategy has to start outside HR</div>
+        </div>
         <span class="nugget-arrow">&rarr;</span>
       </a>
       <a href="insight-to-action.html" class="nugget">
-        Insight to Action
+        <div>
+          <div class="nugget-title">Insight to Action</div>
+          <div class="nugget-sub">Turning business insight into a People strategy you can actually execute</div>
+        </div>
         <span class="nugget-arrow">&rarr;</span>
       </a>
       <a href="brick-by-brick-alignment.html" class="nugget">
-        Brick by Brick Alignment
+        <div>
+          <div class="nugget-title">Brick by Brick Alignment</div>
+          <div class="nugget-sub">Getting stakeholders aligned before the roadmap is finalised, not after</div>
+        </div>
         <span class="nugget-arrow">&rarr;</span>
       </a>
     </div>
@@ -125,8 +144,8 @@
   </div>
 
   <div style="margin-top: 56px; padding: 28px; background: var(--pink-light); border-left: 3px solid var(--pink-deep);">
-    <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink-deep); margin-bottom: 10px;">POP Lab</div>
-    <p style="font-size: 16px; line-height: 1.65; margin-bottom: 14px;">Ready to apply this thinking? POP Lab is the thinking companion that brings each of these frameworks to life — through your real situations, not hypotheticals.</p>
+    <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink-deep); margin-bottom: 10px;">POP Lab &middot; Thinking Companion</div>
+    <p style="font-size: 16px; line-height: 1.65; margin-bottom: 14px;">POP Lab doesn't hand you answers, it develops your thinking. It asks before it advises and pushes back on lazy diagnosis, building your capability over time instead of your dependency on it.</p>
     <a href="https://lab.thepopsage.com" style="font-size: 15px; font-weight: 600; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--pink-deep);">Try POP Lab &rarr;</a>
   </div>
 
