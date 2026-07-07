@@ -170,6 +170,17 @@
   }
   .lab-link a:hover { color: var(--black); border-color: var(--black); }
 
+  .back-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--warm-gray);
+    text-decoration: none;
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--pink-deep); }
+  .back-link .arrow-left { margin-right: 6px; }
+
   @media (max-width: 480px) {
     .page { padding: 48px 20px 72px; }
     .mental-model { font-size: 19px; }
@@ -180,6 +191,8 @@
 </head>
 <body>
 <div class="page">
+
+  <a class="back-link" href="index.html"><span class="arrow-left">&larr;</span>Back to POP Academy</a>
 
   <div class="eyebrow">POP Academy &nbsp;·&nbsp; <span>The Commercial Ally</span> &nbsp;·&nbsp; People Roadmapping for Dummies</div>
 
