@@ -55,6 +55,42 @@
     border-top: 1px solid var(--border);
   }
 
+  .notify-form {
+    display: flex;
+    gap: 10px;
+    padding: 16px 0 4px;
+    border-top: 1px solid var(--border);
+  }
+  .notify-input {
+    flex: 1;
+    font-family: var(--sans);
+    font-size: 15px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: var(--off-white);
+    color: var(--black);
+  }
+  .notify-input::placeholder { color: var(--warm-gray); }
+  .notify-btn {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 2px;
+    background: var(--black);
+    color: var(--off-white);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .notify-btn:hover { background: var(--pink-deep); color: var(--black); }
+  .notify-note {
+    font-size: 13px;
+    color: var(--warm-gray);
+    margin-bottom: 4px;
+  }
+
   /* ── Nugget links ── */
   .nugget {
     display: flex;
@@ -140,19 +176,34 @@
     <div class="pillar">
       <div class="pillar-label">Pillar 02</div>
       <div class="pillar-name">The Trusted Advisor</div>
-      <div class="pillar-coming">Coming soon</div>
+      <div class="notify-note">Get notified when this pillar launches.</div>
+      <form class="notify-form" action="https://formspree.io/f/xwvgbzew" method="POST">
+        <input class="notify-input" type="email" name="email" placeholder="Your email" required>
+        <input type="hidden" name="pillar" value="The Trusted Advisor">
+        <button class="notify-btn" type="submit">Notify me</button>
+      </form>
     </div>
 
     <div class="pillar">
       <div class="pillar-label">Pillar 03</div>
       <div class="pillar-name">The Growth Coach</div>
-      <div class="pillar-coming">Coming soon</div>
+      <div class="notify-note">Get notified when this pillar launches.</div>
+      <form class="notify-form" action="https://formspree.io/f/xwvgbzew" method="POST">
+        <input class="notify-input" type="email" name="email" placeholder="Your email" required>
+        <input type="hidden" name="pillar" value="The Growth Coach">
+        <button class="notify-btn" type="submit">Notify me</button>
+      </form>
     </div>
 
     <div class="pillar">
       <div class="pillar-label">Pillar 04</div>
       <div class="pillar-name">The Experience Shaper</div>
-      <div class="pillar-coming">Coming soon</div>
+      <div class="notify-note">Get notified when this pillar launches.</div>
+      <form class="notify-form" action="https://formspree.io/f/xwvgbzew" method="POST">
+        <input class="notify-input" type="email" name="email" placeholder="Your email" required>
+        <input type="hidden" name="pillar" value="The Experience Shaper">
+        <button class="notify-btn" type="submit">Notify me</button>
+      </form>
     </div>
 
   </div>
