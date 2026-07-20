@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ask Is the Easy Part — POP Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --pink: #EFBBCF;
+    --pink-deep: #E0A0BB;
+    --pink-light: #F9EBF2;
+    --black: #18140F;
+    --off-white: #FAF7F3;
+    --warm-gray: #8A7E72;
+    --light-gray: #E8E2DA;
+    --border: rgba(24,20,15,0.12);
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html, body {
+    background: var(--off-white);
+    color: var(--black);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+
+  .eyebrow {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 28px;
+  }
+  .eyebrow span { color: var(--pink-deep); }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(34px, 6vw, 48px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-bottom: 48px;
+  }
+
+  .label {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pink-deep);
+    margin: 44px 0 14px;
+  }
+  .label:first-of-type { margin-top: 0; }
+
+  .step-label {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--black);
+    margin: 28px 0 8px;
+  }
+
+  p { margin-bottom: 18px; max-width: 62ch; }
+  p:last-child { margin-bottom: 0; }
+
+  .mental-model {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--black);
+    max-width: 56ch;
+  }
+
+  em { font-style: italic; }
+
+  .chain {
+    margin: 28px 0 32px;
+    padding: 24px 28px;
+    background: var(--pink-light);
+    border-left: 3px solid var(--pink-deep);
+  }
+  .chain-spine {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--black);
+  }
+  .chain-spine .arrow {
+    font-family: var(--sans);
+    font-style: normal;
+    color: var(--pink-deep);
+    margin: 0 6px;
+  }
+  .chain-cases {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .chain:first-child .chain-cases,
+  .chain > .chain-cases:first-child { margin-top: 0; }
+  .chain-case {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .chain-case .fact { font-style: italic; }
+  .chain-case .arrow { color: var(--pink-deep); margin: 0 4px; font-style: normal; }
+
+  .rule {
+    border: none;
+    border-top: 0.5px solid var(--border);
+    margin: 48px 0;
+  }
+
+  .line-block {
+    margin: 0;
+    padding: 0 0 0 24px;
+    border-left: 3px solid var(--pink-deep);
+  }
+  .line-block p {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.35;
+    color: var(--black);
+    max-width: 50ch;
+  }
+
+  .try-this {
+    background: var(--black);
+    color: var(--off-white);
+    padding: 32px 28px;
+    margin-top: 0;
+  }
+  .try-this .label { color: var(--pink); margin-top: 0; }
+  .try-this p { color: var(--off-white); max-width: 58ch; margin-bottom: 0; }
+
+  .lab-link {
+    margin-top: 40px;
+    font-size: 15px;
+    color: var(--warm-gray);
+    font-style: italic;
+  }
+  .lab-link a {
+    color: var(--pink-deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--pink-deep);
+  }
+  .lab-link a:hover { color: var(--black); border-color: var(--black); }
+
+  .back-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--warm-gray);
+    text-decoration: none;
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--pink-deep); }
+  .back-link .arrow-left { margin-right: 6px; }
+
+  @media (max-width: 480px) {
+    .page { padding: 48px 20px 72px; }
+    .mental-model { font-size: 19px; }
+    .line-block p { font-size: 21px; }
+    .chain-row { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <a class="back-link" href="index.html"><span class="arrow-left">&larr;</span>Back to POP Academy</a>
+
+  <div class="eyebrow">POP Academy &nbsp;·&nbsp; <span>The Commercial Ally</span> &nbsp;·&nbsp; ROI-Driven Budgeting</div>
+
+  <h1>The Ask Is the Easy Part</h1>
+
+  <div class="label">The situation</div>
+  <p>You made the case for your roadmap, got the budget approved, and it felt like a win. Six months later someone asks how the initiative is actually going, and you don't have a clean answer. You know roughly what you spent, but not what it delivered, so when it's time to ask for next year's budget, you have nothing solid to point to.</p>
+
+  <div class="label">The mental model</div>
+  <p class="mental-model">Getting your roadmap funded and running that budget well are two different skills. The pitch gets you the money. What you do with it afterward is what gets you the next one.</p>
+
+  <hr class="rule">
+
+  <div class="label">Why this matters</div>
+  <p>Most People professionals put all their effort into the pitch and treat approval as the finish line. Once the budget is signed off, tracking becomes an afterthought, something to reconstruct at year-end if anyone happens to ask. That's backwards. The pitch is a single event; managing the money is what actually happens for the rest of the year.</p>
+  <p>Say you pitched a wellbeing initiative at a fixed cost, projected to cut absenteeism within two quarters. If nobody tracked actual spend against that forecast, or checked whether absenteeism actually moved, the honest answer at the next budget cycle is "I think it helped." That's not a story a finance leader, or whoever holds the budget conversation, finds persuasive twice, and in leaner environments where every line is already under pressure, they won't need to hear it twice to stop taking your numbers at face value.</p>
+
+  <div class="label">The model</div>
+  <p>Building a budget and running one are different jobs, and treating them as the same skill is where most People budgets go wrong. Building it is planning: deciding upfront where the money goes and why, before a dollar moves. Running it is discipline: watching what actually happens against that plan, and adjusting in real time as the year unfolds.</p>
+  <p>Most People teams do the planning carefully, once a year, under real pressure to get it right. Then the discipline drops away the moment the budget is approved, because nothing forces it to continue. That gap between the two is exactly where next year's credibility is won or lost.</p>
+
+  <div class="label">The method</div>
+
+  <div class="step-label">Step 1 — Build it so it can be defended later</div>
+  <p>When you're putting together the budget behind your roadmap, be specific about what each initiative on it costs and why. For every line, note the amount, the reasoning behind it, and what you expect it to deliver. That gives you something to check against later, instead of one total that just says "People."</p>
+  <p>Separate spend into two kinds: costs driven by overall company headcount that benefit the whole business, and costs that specifically support the People team itself. That split stops your budget from looking bloated when the real driver is company growth, not the size of your own team.</p>
+  <p>Sort every line into one of three categories, so when a cut is asked for, you already know what to protect first.</p>
+
+  <div class="chain">
+    <div class="chain-cases">
+      <div class="chain-case"><strong>Critical</strong> — the initiative can't be cut without real damage to the business or the plan.</div>
+      <div class="chain-case"><strong>Core</strong> — important, but there's some room to scale it back if needed.</div>
+      <div class="chain-case"><strong>Nice-to-have</strong> — the first thing to go when the budget tightens.</div>
+    </div>
+  </div>
+
+  <div class="step-label">Step 2 — Track what's actually happening, not just what was planned</div>
+  <p>Once the budget is running, check actual spend against forecast regularly, not just at year-end. If an initiative is costing more than expected, or spending less than planned, treat that as information worth acting on, not a variance to explain away later.</p>
+  <p>Say your new hiring platform is under budget three months in. That's not automatically a saving to bank quietly. It might mean uptake has been slower than expected, and that's worth a closer look before you assume it's good news.</p>
+
+  <div class="step-label">Step 3 — Stretch the budget by working with people who share your goals</div>
+  <p>Look for objectives where your priorities overlap with another team's, and pool resources instead of paying for the whole thing alone. If something you need requires real cooperation from another team, make sure it shows up in their budget too, not only yours. This is easy to miss during planning, and worth deliberately checking for.</p>
+  <p>Say your roadmap includes a push to build manager capability, and the sales director is separately trying to fix how long it takes new reps to ramp up. That's one problem showing up in two budgets. Raise it directly, and there's a real chance sales funds part of the work, because it solves something they're already trying to solve.</p>
+  <p>Agreeing on shared spending principles with your finance leader, or whoever holds the budget conversation, before the planning cycle starts helps too. Fixed principles for things like learning and travel spend keep the experience consistent across teams and make each budget conversation faster.</p>
+
+  <div class="step-label">Step 4 — Prove it works before you spend big</div>
+  <p>Before committing serious money to a new People initiative, test a smaller version of it first. Confirm there's real demand and value, then use that evidence to justify the bigger spend. In a resource-constrained environment, this is one of the surest ways to avoid sinking money into something that quietly stalls before anyone notices.</p>
+  <p>Before rolling out a full engagement platform, run it with two teams for eight weeks. If nothing moves, you've avoided the bigger spend. If something does, you walk into the next budget conversation with real numbers, not a projection.</p>
+
+  <hr class="rule">
+
+  <div class="label">The line that matters</div>
+  <div class="line-block">
+    <p>The pitch is a single event. Managing the money is what actually happens for the rest of the year.</p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="try-this">
+    <div class="label">Try this</div>
+    <p>Pick one line item from your roadmap's budget that you're currently running. Can you say right now what it's actually cost so far against what you planned, and what it's delivered? If not, that's the first thing to fix, today, not at year-end.</p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="label">Where this pillar leaves off</div>
+  <p>The Commercial Ally gets you credibility in the room: reading the business, building the roadmap, defending and running the budget behind it. It doesn't tell you what to do when a senior leader asks you to do something you think is wrong, when a manager is quietly avoiding a hard conversation, or when you have to make a real People decision without enough data to be sure. That's harder terrain, and it's what the rest of POP Academy is built around.</p>
+
+  <div class="lab-link">Bring this to life in <a href="https://lab.thepopsage.com">POP Lab — The Commercial Ally</a>. The Trusted Advisor, The Growth Coach, and The Experience Shaper pick up from here.</div>
+
+</div>
+</body>
+</html>
